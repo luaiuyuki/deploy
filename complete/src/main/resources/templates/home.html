@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>Welcome, <span th:text="${username}">User</span></h1>
+
+<div th:each="obj : ${objects}">
+    <div style="border:1px solid black; padding:10px; margin:10px; display:inline-block;">
+        <h2 th:text="${obj}"></h2>
+        <a href="#" style="text-decoration:none;">Quản lý</a>
+    </div>
+</div>
+
+<a href="/logout">Logout</a>
+</body>
+</html>
